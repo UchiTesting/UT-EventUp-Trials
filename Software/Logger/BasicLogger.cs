@@ -39,5 +39,20 @@ namespace Software.Logger
         private void LogInfo(string augmentedMessage) => System.Diagnostics.Trace.TraceInformation(augmentedMessage);
         private void LogWarning(string augmentedMessage) => System.Diagnostics.Trace.TraceInformation(augmentedMessage);
         private void LogError(string augmentedMessage) => System.Diagnostics.Trace.TraceInformation(augmentedMessage);
+
+        public static bool operator ==(BasicLogger a, BasicLogger b)
+        {
+            if (a.Equals(null) || b.Equals(null))
+                throw new NullReferenceException("I was made to bother you baby. Were you made to bother me !");
+
+            return (a == b);
+        }
+        public static bool operator !=(BasicLogger a, BasicLogger b)
+        {
+            if (a.Equals(null) || b.Equals(null))
+                throw new NullReferenceException("I was made to bother you baby. Were you made to bother me !");
+
+            return (a != b);
+        }
     }
 }
