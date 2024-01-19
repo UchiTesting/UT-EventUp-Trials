@@ -12,15 +12,23 @@ namespace Software
     {
         static void Main(string[] args)
         {
-            BasicLogger _logger = new   BasicLogger();
+            InitLoggerDemo initLoggerDemo = new InitLoggerDemo();
+            initLoggerDemo.Showcase();
+
+            NoInitLoggerDemo someClassWithoutInitiatedLogger = new NoInitLoggerDemo();
+            someClassWithoutInitiatedLogger.Showcase();
+        }
+    }
+
+    class InitLoggerDemo
+    {
+        public void Showcase()
+        {
+            BasicLogger _logger = new BasicLogger();
 
             _logger.Log(LogLevels.Info, "This is cool info");
             _logger.Log(LogLevels.Warn, "This is friendly warning");
             _logger.Log(LogLevels.Error, "This is bad error");
-
-            NoInitLoggerDemo someClassWithoutInitiatedLogger = new NoInitLoggerDemo();
-
-            someClassWithoutInitiatedLogger.DoAnything();
         }
     }
 
@@ -37,7 +45,7 @@ namespace Software
         /// <summary>
         /// Throws System.NullReferenceException on purpose
         /// </summary>
-        public void DoAnything()
+        public void Showcase()
         {
             if(_logger != null)
                 _logger.Log(LogLevels.Info, "Will it blend?");
