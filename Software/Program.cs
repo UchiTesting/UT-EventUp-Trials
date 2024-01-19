@@ -39,7 +39,8 @@ namespace Software
         /// </summary>
         public void DoAnything()
         {
-            _logger.Log(LogLevels.Info, "Will it blend?");
+            if(_logger != null)
+                _logger.Log(LogLevels.Info, "Will it blend?");
         }
 
     }
