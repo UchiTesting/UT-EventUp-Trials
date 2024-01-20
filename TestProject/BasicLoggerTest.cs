@@ -1,5 +1,6 @@
 using NUnit.Framework.Internal;
 
+using Software;
 using Software.Logger;
 
 namespace TestProject;
@@ -54,6 +55,41 @@ public class TestFrameworkTest
     [Test]
     [Description("This should pass no matter what")]
     public void GivenAssertPassThenPass()
+    {
+        Assert.Pass();
+    }
+}
+
+[TestFixture]
+public class ServiceTest
+{
+    private Service _service;
+
+    #region Test Life-Cycle
+    [SetUp]
+    public void Setup()
+    {
+        _service = new Service();
+    }
+
+    [TearDown]
+    public void Teardown()
+    {
+        _service = null;
+    }
+    #endregion
+
+    [Test]
+    [Description("This should fail no matter what")]
+    public void GivenWhenThen1()
+    {
+        _service.DoService();
+        //Assert).Fail();
+    }
+
+    [Test]
+    [Description("This should pass no matter what")]
+    public void GivenWhenThen2()
     {
         Assert.Pass();
     }
