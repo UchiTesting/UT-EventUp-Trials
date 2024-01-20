@@ -22,6 +22,10 @@ namespace Software
 
             Service s = new Service();
             s.DoService();
+
+            Entry entry = new Entry();
+
+            entry.DoEntryAction();
         }
     }
 
