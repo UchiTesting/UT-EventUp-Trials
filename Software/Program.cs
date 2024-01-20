@@ -20,8 +20,8 @@ namespace Software
             //NoInitLoggerDemo someClassWithoutInitiatedLogger = new NoInitLoggerDemo();
             //someClassWithoutInitiatedLogger.Showcase();
 
-            Service s = new Service();
-            s.DoService();
+            //Service s = new Service();
+            //s.DoService();
 
             Entry entry = new Entry();
 
