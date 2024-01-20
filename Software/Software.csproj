@@ -43,13 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntryWithTraceListener.cs" />
+    <Compile Include="Entry\EntryWithTraceListener.cs" />
+    <Compile Include="Demo\InitLoggerDemo.cs" />
+    <Compile Include="Logger\LoggerTraceListener.cs" />
     <Compile Include="Logger\BasicLogger.cs" />
     <Compile Include="Logger\ILogger.cs" />
     <Compile Include="Logger\LogLevels.cs" />
+    <Compile Include="Demo\NoInitLoggerDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service.cs" />
+    <Compile Include="Service\Service.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
