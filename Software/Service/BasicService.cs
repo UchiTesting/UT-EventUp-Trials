@@ -4,7 +4,7 @@
     ///  Representative of any service.
     ///  Contains calls to System.Diagnostics.Trace tracing methods.
     /// </summary>
-    public class Service
+    public class BasicService
     {
         public void DoService()
         {

@@ -1,4 +1,5 @@
 ﻿using Software.Logger;
+using Software.Service;
 
 using System.Diagnostics;
 
@@ -16,7 +17,7 @@ namespace Software.Entry
     internal class EntryWithTraceListener
     {
         BasicLogger _logger = new BasicLogger();
-        Service service = new Service();
+        BasicService service = new BasicService();
 
         public EntryWithTraceListener()
         {

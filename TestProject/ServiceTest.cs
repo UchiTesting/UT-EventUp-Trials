@@ -5,15 +5,15 @@ using Software.Service;
 namespace TestProject;
 
 [TestFixture]
-public class ServiceTest
+public class BasicServiceTest
 {
-    private Service _service;
+    private BasicService _service;
 
     #region Test Life-Cycle
     [SetUp]
     public void Setup()
     {
-        _service = new Service();
+        _service = new BasicService();
     }
 
     [TearDown]

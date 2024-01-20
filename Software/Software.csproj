@@ -52,7 +52,7 @@
     <Compile Include="Demo\NoInitLoggerDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\Service.cs" />
+    <Compile Include="Service\BasicService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
