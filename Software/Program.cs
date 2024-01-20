@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,9 +24,28 @@ namespace Software
             //Service s = new Service();
             //s.DoService();
 
-            Entry entry = new Entry();
+            EntryWithTraceListener entry = new EntryWithTraceListener();
 
             entry.DoEntryAction();
+        }
+    }
+
+    public class LoggerTraceListener : TraceListener
+    {
+        private readonly Software.Logger.ILogger _logger;
+
+        public LoggerTraceListener(ILogger logger)
+        {
+            _logger = logger;
+        }
+        public override void Write(string message)
+        {
+            _logger.Log(LogLevels.Info, "LISTEN ! " + message);
+        }
+
+        public override void WriteLine(string message)
+        {
+            _logger.Log(LogLevels.Info, "LISTEN ! " + message);
         }
     }
 
@@ -56,7 +76,7 @@ namespace Software
         /// </summary>
         public void Showcase()
         {
-            if(_logger != null)
+            if (_logger != null)
                 _logger.Log(LogLevels.Info, "Will it blend?");
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace Software.Logger
 {
-    internal interface ILogger
+    public interface ILogger
     {
         void Log(LogLevels logLevel, string message);
     }
