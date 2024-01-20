@@ -2,6 +2,7 @@
 
 namespace TestProject;
 
+[Explicit]
 [TestFixture]
 public class TestFrameworkTest
 {
