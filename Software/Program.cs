@@ -15,8 +15,10 @@ namespace Software
             InitLoggerDemo initLoggerDemo = new InitLoggerDemo();
             initLoggerDemo.Showcase();
 
-            NoInitLoggerDemo someClassWithoutInitiatedLogger = new NoInitLoggerDemo();
-            someClassWithoutInitiatedLogger.Showcase();
+            // Showcase that even at nullcheck we can get a NullReferenceException
+            // This is because the checked object has some  logic in the operator that throws the exception should the instance be null
+            //NoInitLoggerDemo someClassWithoutInitiatedLogger = new NoInitLoggerDemo();
+            //someClassWithoutInitiatedLogger.Showcase();
         }
     }
 
