@@ -11,16 +11,10 @@ public class BasicLoggerTests
 
     #region Test Life-Cycle
     [SetUp]
-    public void Setup()
-    {
-        _logger = new BasicLogger();
-    }
+    public void Setup() => _logger = new BasicLogger();
 
     [TearDown]
-    public void Teardown()
-    {
-        _logger = null;
-    }
+    public void Teardown() => _logger = null;
     #endregion
 
     [Test]

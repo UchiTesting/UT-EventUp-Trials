@@ -11,22 +11,13 @@ public class BasicServiceTest
 
     #region Test Life-Cycle
     [SetUp]
-    public void Setup()
-    {
-        _service = new BasicService();
-    }
+    public void Setup() => _service = new BasicService();
 
     [TearDown]
-    public void Teardown()
-    {
-        _service = null;
-    }
+    public void Teardown() => _service = null;
     #endregion
 
     [Test]
     [Description("This should fail no matter what")]
-    public void GivenDoServiceWhenFinishedThenNoException()
-    {
-        _service.DoService();
-    }
+    public void GivenDoServiceWhenFinishedThenNoException() => _service.DoService();
 }
