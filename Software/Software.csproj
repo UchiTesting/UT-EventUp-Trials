@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entry\EntryWithMediator.cs" />
     <Compile Include="Entry\EntryWithSimpleEventSub.cs" />
     <Compile Include="Entry\EntryWithTraceListener.cs" />
     <Compile Include="Demo\InitLoggerDemo.cs" />
@@ -51,11 +52,15 @@
     <Compile Include="Logger\ILogger.cs" />
     <Compile Include="Logger\LogLevels.cs" />
     <Compile Include="Demo\NoInitLoggerDemo.cs" />
+    <Compile Include="Logger\LogLevelsInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AnotherMediatedService.cs" />
     <Compile Include="Service\BasicEventService.cs" />
     <Compile Include="Service\BasicService.cs" />
     <Compile Include="Service\IService.cs" />
+    <Compile Include="Service\MediatedParnter.cs" />
+    <Compile Include="Service\MediatedService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

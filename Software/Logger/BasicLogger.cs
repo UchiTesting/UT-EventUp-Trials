@@ -8,9 +8,6 @@ namespace Software.Logger
     {
         public void Log(LogLevels logLevel, string message)
         {
-            // Listeners à creuser
-            //var traceObject = System.Diagnostics.Trace.Listeners;
-
             message = AugmentMessage(logLevel, message);
 
             switch (logLevel)

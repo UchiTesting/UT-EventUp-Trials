@@ -27,7 +27,18 @@ namespace Software
             //EntryWithTraceListener entryWithTraceListener = new EntryWithTraceListener();
             //entryWithTraceListener.DoEntryAction();
 
-            EntryWithSimpleEventSubDemo();
+            //EntryWithSimpleEventSubDemo();
+
+            EntryWithMediatorDemo();
+        }
+
+        private static void EntryWithMediatorDemo()
+        {
+            EntryWithMediator entryWithMediator = new EntryWithMediator();
+
+            entryWithMediator.DoAnotherAction("Hello");
+            entryWithMediator.DoEntryAction();
+            entryWithMediator.DoAnotherAction("World!");
         }
 
         static void EntryWithSimpleEventSubDemo() {
